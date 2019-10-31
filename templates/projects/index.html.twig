@@ -9,11 +9,13 @@
 </style>
 
 <div class="example-wrapper">
+	<p>Il y a {{ projects|length }} projets : {{ [projects[0], projects[1], projects[2]]|join(', ', ' et ') }}</p>
+	<p>Voici la liste des projets :</p>
+
     {% for project in projects %}
     <li>{{project}}</li>
     {% endfor %}
 
-    <p>{{ [projects[0], projects[1], projects[2]]|join(', ', ' et ') }}</p>
     
     
 </div>
